@@ -10,6 +10,7 @@
 <h1>Home</h1>
 <a href="pepe">Enlace al primer servlet</a><br/>
 <a href="ruta?param1=valor&param2=valor2">Enlace otro servlet</a>
+<a href="redir">Servlet Redirector</a>
 <a href="modules">módulo principal</a>
 <a href="modules?modulo=Home">módulo Home</a>
 <a href="modules?modulo=Contact">módulo Contact</a>
