@@ -11,8 +11,11 @@
     <title>JSP Redirigido</title>
 </head>
 <body>
-<% String variable=(String)request.getAttribute("variable");%>
+<% String variable=(String)request.getAttribute("variable");
+    Integer minumero=(Integer)request.getAttribute("numero");
+%>
 <h5>Variable:<%=variable %></h5>
+<p>Numero:<%=minumero %></p>
 <a href="index.jsp">Página principal</a>
 </body>
 </html>

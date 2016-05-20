@@ -17,6 +17,8 @@ public class RedirServlet extends HttpServlet {
                       HttpServletResponse response){
         String variable="valor";
         request.setAttribute("variable",variable);
+        request.setAttribute("numero",1);
+
         RequestDispatcher rd=getServletContext()
                 .getRequestDispatcher("/redirigido.jsp");
         try {
