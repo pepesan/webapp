@@ -14,6 +14,7 @@
 <a href="modules">módulo principal</a>
 <a href="modules?modulo=Home">módulo Home</a>
 <a href="modules?modulo=Contact">módulo Contact</a>
+<a href="modules?modulo=Producto">módulo Producto</a>
 <form name="formulario" id="formulario" action="form" method="post">
     <label for="usuario">Usuario</label>
     <input id="usuario" type="text" name="usuario" value="" /><br/>

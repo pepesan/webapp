@@ -2,6 +2,7 @@ package com.cursosdedesarrollo.app.servlets;
 
 import com.cursosdedesarrollo.app.controller.ContactController;
 import com.cursosdedesarrollo.app.controller.HomeController;
+import com.cursosdedesarrollo.app.controller.ProductoController;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,9 +16,12 @@ import javax.servlet.http.HttpServletResponse;
 public class Dispatcher extends HttpServlet{
     HomeController homeController;
     ContactController contactController;
+    private ProductoController productoController;
+
     public Dispatcher(){
         homeController=new HomeController();
         contactController=new ContactController();
+        productoController=new ProductoController();
     }
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response){
@@ -36,10 +40,12 @@ public class Dispatcher extends HttpServlet{
         System.out.println(moduleName);
         if (moduleName.equals("Home")){
 
-            homeController.process(request,response);
+            homeController.process(request,response, getServletContext());
         }else if(moduleName.equals("Contact")){
 
-            contactController.process(request,response);
+            contactController.process(request,response, getServletContext());
+        }else if(moduleName.equals("Producto")){
+            productoController.process(request,response, getServletContext());
         }
     }
 

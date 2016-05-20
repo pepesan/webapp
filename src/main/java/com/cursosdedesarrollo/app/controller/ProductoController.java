@@ -1,17 +1,18 @@
 package com.cursosdedesarrollo.app.controller;
 
+import com.cursosdedesarrollo.app.domain.Producto;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 /**
  * Created by pepesan on 20/5/16.
  */
-public class HomeController implements  Controller{
+public class ProductoController implements Controller{
     public void process(HttpServletRequest request,
                         HttpServletResponse response) {
 
@@ -19,8 +20,11 @@ public class HomeController implements  Controller{
     public void process(HttpServletRequest request,
                         HttpServletResponse response,
                         ServletContext servletContext){
+        Producto p=new Producto(1l,"iPhone");
+        request.setAttribute("producto",p);
+
         RequestDispatcher rd=servletContext
-                .getRequestDispatcher("/home.jsp");
+                .getRequestDispatcher("/producto.jsp");
         try {
             rd.forward(request,response);
         } catch (ServletException e) {
@@ -28,7 +32,5 @@ public class HomeController implements  Controller{
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 }
