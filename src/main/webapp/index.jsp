@@ -7,9 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Hello World!</h1>
+<h1>Home</h1>
 <a href="pepe">Enlace al primer servlet</a><br/>
-<a href="ruta">Enlace otro servlet</a>
+<a href="ruta?param1=valor&param2=valor2">Enlace otro servlet</a>
+<a href="modules">módulo principal</a>
+<a href="modules?modulo=Home">módulo Home</a>
+<a href="modules?modulo=Contact">módulo Contact</a>
 <form name="formulario" id="formulario" action="form" method="post">
     <label for="usuario">Usuario</label>
     <input id="usuario" type="text" name="usuario" value="" /><br/>

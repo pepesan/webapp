@@ -1,8 +1,4 @@
-package com.cursosdedesarrollo.app;
-
-/**
- * Created by pepesan on 20/5/16.
- */
+package com.cursosdedesarrollo.app.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,11 +8,18 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/ruta")
-public class OtroServlet extends HttpServlet{
+/**
+ * Created by pepesan on 19/5/16.
+ */
+@WebServlet("/pepe")
+public class MiServlet extends HttpServlet {
+
+
+
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
-            throws IOException, ServletException {
+            throws IOException, ServletException{
+
         PrintWriter out = response.getWriter();
         out.println("<html>");
         out.println("<body>");
@@ -24,7 +27,5 @@ public class OtroServlet extends HttpServlet{
         out.println("<a href='/'>Inicio</a>");
         out.println("</body>");
         out.println("</html>");
-        out.close();
     }
-
 }

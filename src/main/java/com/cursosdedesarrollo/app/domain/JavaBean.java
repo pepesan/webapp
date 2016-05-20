@@ -1,4 +1,4 @@
-package com.cursosdedesarrollo.app;
+package com.cursosdedesarrollo.app.domain;
 
 import java.io.Serializable;
 
