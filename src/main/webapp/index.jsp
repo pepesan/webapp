@@ -8,6 +8,14 @@
 </head>
 <body>
 <h1>Hello World!</h1>
-<a href="pepe">Enlace al primer servlet</a>
+<a href="pepe">Enlace al primer servlet</a><br/>
+<a href="ruta">Enlace otro servlet</a>
+<form name="formulario" id="formulario" action="form" method="post">
+    <label for="usuario">Usuario</label>
+    <input id="usuario" type="text" name="usuario" value="" /><br/>
+    <label for="pass">Contraseña</label>
+    <input id="pass" type="password" name="pass" value="" /><br/>
+    <input name="submit" type="submit" value="Enviar"/>
+</form>
 </body>
 </html>
